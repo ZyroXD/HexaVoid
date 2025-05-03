@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minecraft - Download</title>
+  <link rel="stylesheet" href="minecraft.css">
+</head>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 25px;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
+  }
+
+  .top-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+  }
+
+  .top-section img {
+    width: 300px;
+    border-radius: 20px;
+  }
+
+  .intro-text {
+    flex: 1;
+  }
+
+  .intro-text h1 {
+    color: #3498db;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+
+  .intro-text p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.7;
+  }
+
+  .divider {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #3498db, #00f2fe, #7d5fff);
+    border-radius: 50px;
+    margin: 40px 0;
+  }
+
+  .description {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.8;
+    text-align: justify;
+  }
+
+  .download-btn {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 14px 30px;
+    font-size: 1rem;
+    border-radius: 50px;
+    background: black;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease;
+    z-index: 1;
+  }
+
+  .download-btn::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);
+    background-size: 400%;
+    border-radius: 50px;
+    z-index: -1;
+    animation: rainbow 5s linear infinite;
+    opacity: 0.8;
+  }
+
+  @keyframes rainbow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .download-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255,255,255,0.2);
+  }
+</style>
+<body>
+
+  
+
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Game Image & Intro -->
+    <div class="top-section">
+      <img src="images/Minecraft.jpg" alt="Minecraft Image" class="game-img">
+      <div class="intro-text">
+        <h1>Minecraft</h1>
+        <p>Minecraft is an open-world sandbox game where players explore, build, and survive in a pixel-based world filled with limitless possibilities and creativity.</p>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <hr class="divider">
+
+    <!-- Detailed Description -->
+    <div class="description">
+      <p>
+        Minecraft is a groundbreaking sandbox video game developed by Mojang Studios. It provides a procedurally generated 3D world with infinite terrain and virtually endless exploration possibilities. Players can gather resources, craft tools, build massive structures, and survive in an environment filled with monsters, animals, and biomes ranging from deserts to oceans. The game has two major modes: Creative Mode, where imagination runs wild with unlimited resources, and Survival Mode, where strategy and planning are key to staying alive. Minecraft has built a strong global community and is renowned for its educational benefits, allowing players to develop logical thinking, problem-solving, and creativity. Whether building automated farms with Redstone, venturing into the Nether or End dimensions, or playing custom maps and mods, Minecraft delivers unmatched freedom and engagement. With mobile optimization (Minecraft PE), players can enjoy the same dynamic gameplay experience on Android devices. Minecraft continues to receive updates, bringing new blocks, mobs, and mechanics, ensuring the experience stays fresh and limitless for millions of users worldwide.
+      </p>
+    </div>
+
+    <!-- Download Button -->
+    <div class="download">
+      <a href="https://mcpedl.org/uploads_files/08-04-2025/minecraft-1-21-72-arm64-v8a.apk" download class="download-btn">Download Minecraft</a>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Descenders - Game Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 25px;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
+    }
+
+    .top-section {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    .top-section img {
+      width: 300px;
+      border-radius: 20px;
+    }
+
+    .intro-text {
+      flex: 1;
+    }
+
+    .intro-text h1 {
+      color: #3498db;
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .intro-text p {
+      font-size: 1rem;
+      color: #ccc;
+      line-height: 1.7;
+    }
+
+    .divider {
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(to right, #3498db, #00f2fe, #7d5fff);
+      border-radius: 50px;
+      margin: 40px 0;
+    }
+
+    .description {
+      font-size: 1rem;
+      color: #ccc;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 14px 30px;
+      font-size: 1rem;
+      border-radius: 50px;
+      background: black;
+      color: white;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      transition: 0.3s ease;
+      z-index: 1;
+    }
+
+    .download-btn::before {
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);
+      background-size: 400%;
+      border-radius: 50px;
+      z-index: -1;
+      animation: rainbow 5s linear infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes rainbow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .download-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(255,255,255,0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="top-section">
+      <img src="images/Desenders.png" alt="Descenders Game Cover">
+      <div class="intro-text">
+        <h1>Descenders</h1>
+        <p>Experience the rush of downhill biking in this fast-paced, rogue-like racing game. Descenders puts you in control of a customizable rider, racing through dangerous trails while performing stunts and surviving each level's unique terrain.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="description">
+      <p>
+        Descenders is a thrilling downhill biking game that combines the unpredictability of rogue-like elements with the precision of physics-based biking mechanics. Every map is procedurally generated, offering new jumps, turns, and terrain every run. You can choose your own path down each course, performing tricks, flips, and drifts while trying to avoid crashing. With every successful trick and challenge completed, you earn reputation that unlocks gear, bikes, and customization options.
+
+        The game offers deep replayability through its rogue-like systems. Crashing too much means losing progress, so balance risk and reward as you ride. Descenders supports multiplayer, allowing you to team up with others or compete against players online. You'll also align with a riding team that suits your style: trick-heavy, speed-focused, or balanced.
+
+        With vibrant visuals, thumping music, and responsive controls, Descenders immerses you in a high-adrenaline biking experience. From forests to snowy peaks and desert canyons, each trail feels alive and dangerous. Frequent updates and community events keep the content fresh, and the game’s cross-platform support ensures you're always connected.
+
+        Whether you’re looking for a game to master or just want some extreme biking fun, Descenders offers a unique experience unlike any other on Android.
+      </p>
+    </div>
+
+    <a href="https://getmodsapk.com/dl-track/descenders-mod-apk/31430" class="download-btn">Download Descenders</a>
+  </div>
+</body>
+</html>

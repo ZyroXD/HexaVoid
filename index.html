@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Void Loading</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <canvas class="particle-canvas"></canvas>
+  <div class="overlay"></div>
+
+  <div class="center">
+    <div class="void-text">
+        <span class="v-letter">V</span><span class="oid-text">oid</span>
+      <div class="bubble-container">
+        <span class="bubble"></span>
+        <span class="bubble"></span>
+        <span class="bubble"></span>
+      </div>
+    </div>
+    <div class="loading-bar">
+      <div class="progress"></div>
+    </div>
+  </div>
+
+  <script>
+    const progress = document.querySelector('.progress');
+    const vLetter = document.querySelector('.v-letter');
+    const overlay = document.querySelector('.overlay');
+
+    progress.addEventListener('animationend', () => {
+        vLetter.classList.add('float-to-corner');
+        document.querySelector('.oid-text').classList.add('fade-out');
+      overlay.classList.add('blackout');
+
+      setTimeout(() => {
+        window.location.href = "register.html"; // or change section here
+      }, 1200);
+    });
+
+    document.querySelectorAll('.particle-canvas').forEach(c => {
+    const ctx = c.getContext('2d');
+    let W = c.width = c.offsetWidth;
+    let H = c.height = c.offsetHeight;
+
+    let particles = Array.from({ length: 40 }, () => ({
+      x: Math.random() * W,
+      y: Math.random() * H,
+      r: Math.random() * 2 + 1,
+      dx: (Math.random() - 0.5) * 1.5,
+      dy: (Math.random() - 0.5) * 1.5
+    }));
+
+    function animate() {
+      ctx.clearRect(0, 0, W, H);
+      particles.forEach(p => {
+        p.x += p.dx;
+        p.y += p.dy;
+        if (p.x < 0 || p.x > W) p.dx *= -1;
+        if (p.y < 0 || p.y > H) p.dy *= -1;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = '#ffffff22';
+        ctx.fill();
+      });
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  });
+  </script>
+</body>
+</html>

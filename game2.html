@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Human: Fall Flat - Game Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 25px;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
+    }
+
+    .top-section {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    .top-section img {
+      width: 300px;
+      border-radius: 20px;
+    }
+
+    .intro-text {
+      flex: 1;
+    }
+
+    .intro-text h1 {
+      color: #3498db;
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .intro-text p {
+      font-size: 1rem;
+      color: #ccc;
+      line-height: 1.7;
+    }
+
+    .divider {
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(to right, #3498db, #00f2fe, #7d5fff);
+      border-radius: 50px;
+      margin: 40px 0;
+    }
+
+    .description {
+      font-size: 1rem;
+      color: #ccc;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 14px 30px;
+      font-size: 1rem;
+      border-radius: 50px;
+      background: black;
+      color: white;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      transition: 0.3s ease;
+      z-index: 1;
+    }
+
+    .download-btn::before {
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);
+      background-size: 400%;
+      border-radius: 50px;
+      z-index: -1;
+      animation: rainbow 5s linear infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes rainbow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .download-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(255,255,255,0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="top-section">
+      <img src="images/Human Fall Flats.webp" alt="Human: Fall Flat Game Cover">
+      <div class="intro-text">
+        <h1>Human: Fall Flat</h1>
+        <p>Human: Fall Flat is a quirky, open-ended puzzle platformer that challenges players with a variety of physics-based obstacles. Control a wobbly human character to solve puzzles, navigate obstacles, and explore vibrant, open levels.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="description">
+      <p>
+        Human: Fall Flat introduces a unique physics-based puzzle experience where players control a customizable human character through a variety of bizarre and wacky levels. The goal of each level is to solve different puzzles and challenges that require both logic and creativity. The game has an open-ended approach, meaning players can choose how to tackle each obstacle.
+
+        As players progress, they face increasingly complex challenges, ranging from navigating through dangerous areas to using objects to solve puzzles and even manipulating the environment. The game's physics engine allows for an incredibly interactive experience, where every object can be used in creative ways to solve problems.
+
+        The game’s charming, minimalist visual design and the wobbly, ragdoll movement of the character add to the game's charm and humor. It’s a multiplayer game as well, allowing players to team up with friends for even more chaotic, funny moments.
+
+        In addition to the main story mode, Human: Fall Flat also features several user-generated levels, expanding the gameplay experience with endless creative possibilities. Whether solving puzzles solo or with friends, Human: Fall Flat offers hours of fun and laughter.
+      </p>
+    </div>
+
+    <a href="https://files.an1.co/human-fall-flat_2.3.0-an1.com.apk" class="download-btn">Download Human: Fall Flat</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Five Nights at Freddy's - Game Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 25px;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
+    }
+
+    .top-section {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    .top-section img {
+      width: 300px;
+      border-radius: 20px;
+    }
+
+    .intro-text {
+      flex: 1;
+    }
+
+    .intro-text h1 {
+      color: #3498db;
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .intro-text p {
+      font-size: 1rem;
+      color: #ccc;
+      line-height: 1.7;
+    }
+
+    .divider {
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(to right, #3498db, #00f2fe, #7d5fff);
+      border-radius: 50px;
+      margin: 40px 0;
+    }
+
+    .description {
+      font-size: 1rem;
+      color: #ccc;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 14px 30px;
+      font-size: 1rem;
+      border-radius: 50px;
+      background: black;
+      color: white;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      transition: 0.3s ease;
+      z-index: 1;
+    }
+
+    .download-btn::before {
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);
+      background-size: 400%;
+      border-radius: 50px;
+      z-index: -1;
+      animation: rainbow 5s linear infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes rainbow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .download-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(255,255,255,0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="top-section">
+      <img src="images/Five Night at Fready.jpeg" alt="Five Nights at Freddy's Game Cover">
+      <div class="intro-text">
+        <h1>Five Nights at Freddy's</h1>
+        <p>Five Nights at Freddy's (FNaF) is a survival horror game that traps you in a haunted, malfunctioning pizzeria. As a night security guard, you must survive against deadly animatronic characters that roam the building after hours.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="description">
+      <p>
+        The game takes place at Freddy Fazbear's Pizza, where you, as a night watchman, are tasked with monitoring security cameras, keeping an eye on the movement of animatronics, and ensuring you survive the night. However, these animatronics are not your friendly neighborhood mascots; they are hostile creatures that will do anything to harm you.
+
+        The main objective in FNaF is to survive five nights (or more, depending on the game mode) by using limited resources. Players are tasked with monitoring the security cameras, closing doors to protect themselves, and controlling the building's power usage. The mechanics of FNaF have created an engaging and terrifying experience for players, utilizing jump scares, atmospheric tension, and clever puzzles.
+
+        Throughout the game, players must learn the behaviors of different animatronics, who follow set patterns and react to their surroundings. As you progress through the levels, the difficulty increases, and you encounter new, more dangerous animatronics that make surviving the night an even greater challenge.
+
+        Five Nights at Freddy's has become a cultural phenomenon, spawning multiple sequels, spin-offs, books, and fan-created content. Its mix of jump scares, strategy, and storytelling keeps players on the edge of their seat, and its pixelated aesthetic adds to the eerie vibe of the game.
+      </p>
+    </div>
+
+    <a href="https://d.apkpure.com/b/APK/com.scottgames.fivenightsatfreddysdemo?versionCode=25" class="download-btn">Download Five Nights at Freddy's</a>
+  </div>
+</body>
+</html>

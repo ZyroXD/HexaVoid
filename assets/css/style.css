@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    background: #fff;
+    overflow: hidden;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .center {
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .void-text {
+    font-size: 60px;
+    font-weight: bold;
+    color: #000;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+  }
+  
+  .v-letter {
+    display: inline-block;
+    transition: all 1s ease-in-out;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .float-to-corner {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 40px;
+    color: white;
+    z-index: 3;
+  }
+  .oid-text {
+    display: inline-block;
+    transition: opacity 0.3s ease-out;
+  }
+  
+  .fade-out {
+    opacity: 100;
+  }
+
+  .bubble-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  
+  .bubble {
+    position: absolute;
+    bottom: 0;
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    animation: rise 2s infinite ease-in-out;
+  }
+  
+  .bubble:nth-child(1) { left: 25%; animation-delay: 0s; }
+  .bubble:nth-child(2) { left: 50%; animation-delay: 0.3s; }
+  .bubble:nth-child(3) { left: 75%; animation-delay: 0.6s; }
+  
+  @keyframes rise {
+    0% { transform: translateY(100%); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(-120%); opacity: 0; }
+  }
+  
+  .loading-bar {
+    width: 200px;
+    height: 20px;
+    background: #ffffff;
+    border-color: #000;
+    border-radius: 15px;
+    margin-top: 30px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .progress {
+    width: 0;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    animation: load 3s forwards;
+  }
+  
+  @keyframes load {
+    0% { width: 0; }
+    100% { width: 100%; }
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .overlay.blackout {
+    opacity: 1;
+  }
+
+
+  .particle-canvas {
+    position: fixed;
+    background: #ffffff;
+    width: 100%;
+    height: 100%;
+    color: rgb(0, 0, 0);
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+  }
